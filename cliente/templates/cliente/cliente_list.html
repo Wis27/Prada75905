@@ -9,6 +9,10 @@
         <a href="{% url 'cliente:index' %}">Volver</a>
     </button>    
     {% for cliente in clientes %}
-        <p> {{ cliente }} </p>
+        <p>
+            <a href="{% url 'cliente:cliente_detail' cliente.pk %}">
+                {{ cliente.nombre }} {{ cliente.apellido }}
+            </a>
+        </p>
     {% endfor %}
 {% endblock content %}

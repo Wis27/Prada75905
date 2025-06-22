@@ -1,10 +1,11 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-  Descubre el Brillo de la Joyería Dorada
+  
 {% endblock title %}
 
 {% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
   body::before {
     content: '';
@@ -14,45 +15,77 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-image: url('https://images.pexels.com/photos/247295/pexels-photo-247295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: url('https://subeinteriorismo.com/wp-content/uploads/2017/11/sube-interiorismo-joyeria-bilbao-Cilveti_web_03-1920x841.jpg');
     background-position: center;
     filter: blur(8px);
     -webkit-filter: blur(8px);
   }
-
+  h1.display-4 {
+    color: black;
+    text-shadow: 2px 2px 4px #fff8;
+  }
   .carousel-caption h5,
   .carousel-caption p {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
   }
-
-  h1.display-4 {
-      color: rgb(8, 0, 0);
-      text-shadow: 2px 2px 4px #000000;
+ .carousel-inner img {
+    max-height: 500px;
+    object-fit: cover;
   }
+
+
 </style>
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="Collar Dorado">
-    <div class="carousel-caption d-none d-md-block">
-      <h5>Collar Dorado</h5>
-      <p>Elegancia y distinción en cada detalle.</p>
+
+<h1 class="display-4 text-center mb-4">Descubre el Brillo de la Joyería Dorada</h1>
+
+<div id="joyeriaCarrusel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_2X_714231-CBT81657899573_122024-F.webp" class="d-block w-100" alt="Collar Dorado">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Collar Dorado</h5>
+        <p>Elegancia y distinción en cada detalle.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://carranzaycarranza.com/cdn/shop/articles/Anillos_y_Gemas.jpg?v=1673654920" class="d-block w-100" alt="Anillos de Oro">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Anillos de Oro</h5>
+        <p>Brillo eterno para momentos inolvidables.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.etsystatic.com/49128532/r/il/1f7432/6250139252/il_1588xN.6250139252_hpi6.jpg" class="d-block w-100" alt="Pulsera Dorada">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Pulsera Dorada</h5>
+        <p>Un toque de lujo para tu estilo.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.etsystatic.com/59075765/r/il/9db96e/6980038335/il_1588xN.6980038335_7r7c.jpg" class="d-block w-100" alt="Reloj Dorado">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Reloj Dorado</h5>
+        <p>Precisión y elegancia en cada segundo.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.etsystatic.com/5793103/r/il/40558f/4613762068/il_1588xN.4613762068_j62a.jpg" class="d-block w-100" alt="Broche Dorado">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Broche Dorado</h5>
+        <p>El detalle perfecto para tu look.</p>
+      </div>
     </div>
   </div>
-  <div class="carousel-item">
-    <img src="https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="Anillos de Oro">
-    <div class="carousel-caption d-none d-md-block">
-      <h5>Anillos de Oro</h5>
-      <p>Brillo eterno para momentos inolvidables.</p>
-    </div>
-  </div>
-  <div class="carousel-item">
-    <img src="https://images.pexels.com/photos/1409903/pexels-photo-1409903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="Pulsera Dorada">
-    <div class="carousel-caption d-none d-md-block">
-      <h5>Pulsera Dorada</h5>
-      <p>Un toque de lujo para tu estilo.</p>
-    </div>
-  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#joyeriaCarrusel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#joyeriaCarrusel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 {% endblock content %}
