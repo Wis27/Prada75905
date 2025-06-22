@@ -1,0 +1,5 @@
+<!-- ...código existente... -->
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Collar dorado elegante">
+<img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=600&q=80" alt="Pulsera dorada de lujo">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Zarcillos dorados modernos">
+<!-- ...código existente... -->

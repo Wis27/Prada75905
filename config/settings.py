@@ -25,9 +25,9 @@ from django.core.management.utils import get_random_secret_key
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["esteban81.pythonanywhere.com"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'esteban81.pythonanywhere.com']
 
 
 # Application definition
@@ -135,3 +135,4 @@ try:
 except ModuleNotFoundError:
     # si no está, es porque settings_dev.py está en .gitignore y estamos en producción
     pass
+print("⚠️ ESTE ES EL settings.py CORRECTO ✅")

@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(135deg, #ffe4ec 0%, #fffbe6 100%);
+  color: #bfa14a; /* dorado */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header, .footer {
+  background-color: #fff;
+  border-bottom: 2px solid #f8d7e5;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #f8d7e5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(191, 161, 74, 0.08);
+}
+
+.button {
+  background: linear-gradient(90deg, #f8d7e5 0%, #ffe4ec 100%);
+  color: #bfa14a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.button:hover {
+  background: #bfa14a;
+  color: #fff;
+}
