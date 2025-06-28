@@ -12,12 +12,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <!-- Menú principal -->
         <div class="collapse navbar-collapse" id="navbarMain">
-            {% if user.is_authenticated %}
-              
-           
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.app_name == 'core' %}active{% endif %}" 
@@ -25,9 +21,16 @@
                         <i class="bi bi-house-door me-1"></i>Inicio
                     </a>
                 </li>
-                
+                <!-- Sobre mí SIEMPRE visible -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:about' %}">
+                        <i class="bi bi-person-vcard"></i> Sobre mí
+                    </a>
+                </li>
+                {% if user.is_authenticated %}
                 <!-- Menú desplegable de Productos -->
-                <li class="nav-item dropdown">                    <a class="nav-link dropdown-toggle {% if request.resolver_match.app_name == 'producto' %}active{% endif %}" 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if request.resolver_match.app_name == 'producto' %}active{% endif %}" 
                        href="#" id="navbarDropdownProductos" role="button" 
                        data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-box-seam me-1"></i>Productos
@@ -51,7 +54,6 @@
                         </li>
                     </ul>
                 </li>
-
                 <!-- Menú desplegable de Clientes -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if request.resolver_match.app_name == 'cliente' %}active{% endif %}" 
@@ -73,8 +75,10 @@
                         </li>
                     </ul>
                 </li>
+                {% endif %}
             </ul>
-              <ul class="navbar-nav">
+            <ul class="navbar-nav">
+                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <form action="{% url 'core:logout' %}" method="post">
                         {% csrf_token %}
@@ -83,18 +87,16 @@
                         </button>
                     </form>
                 </li>
+                {% else %}
+                <li class="nav-item ms-lg-3">
+                    <a href="{% url 'core:login' %}">
+                        <button class="btn btn-outline-light" type="button">
+                            <i class="bi bi-person-circle me-1"></i>Login
+                        </button>
+                    </a>
+                </li>
+                {% endif %}
             </ul>
-        {% else %}
-            <!-- Botón de usuario (para futura implementación de login) -->
-            <div class="ms-lg-3">
-                <a href="{% url 'core:login' %}">
-                    <button class="btn btn-outline-light" type="button">
-                        <i class="bi bi-person-circle me-1"></i>Login
-                    </button>
-                </a>
-            </div>
-        
-        {% endif %}
         </div>
     </div>
 </nav>

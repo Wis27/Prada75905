@@ -12,3 +12,6 @@ class UserCreateView(CreateView):
     form_class = UserForm
     template_name = "core/register.html"
     success_url = reverse_lazy("core:login")
+
+def about(request):
+    return render(request, "core/about.html")
